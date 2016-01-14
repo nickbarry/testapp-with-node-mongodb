@@ -46,25 +46,40 @@ module.exports = {
                 imgUrl += possible.charAt(Math.floor(Math.random() * possibleLength));
             }
 
-            //console.log(req.file);
-            var tempPath = req.file.path,
-                ext = path.extname(req.file.originalname).toLowerCase(),
-                targetPath = path.resolve('./public/upload/' + imgUrl + ext);
+            Models.Image.find({filename: imgUrl}, function(err, images){
+                if(images.length > 0){
+                    saveImage(); // if a matching image was found, try again (start over)
+                }else{
+                    var tempPath = req.file.path,
+                        ext = path.extname(req.file.originalname).toLowerCase(),
+                        targetPath = path.resolve('./public/upload/' + imgUrl + ext);
 
-            if(ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif'){
-                fs.rename(tempPath, targetPath, function(err){
-                    if(err) throw err;
+                    if(ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif'){
+                        fs.rename(tempPath, targetPath, function(err){
+                            if(err) throw err;
 
-                    res.redirect('/images/' + imgUrl);
-                });
-            }else{
-                fs.unlink(tempPath, function(err){
-                    if(err) throw err;
+                            var newImg = new Models.Image({
+                                title: req.body.title,
+                                description: req.body.description,
+                                filename: imgUrl + ext
+                            });
 
-                    res.json(500, {error: 'Only image files are allowed.'});
-                });
-            }
-        }
+                            newImg.save(function(err,image){
+                                console.log('Successfully inserted image: ' + image.filename);
+                                res.redirect('/images/' + image.uniqueId);
+                            });
+                        });
+                    }else{
+                        fs.unlink(tempPath, function(err){
+                            if(err) throw err;
+
+                            res.json(500, {error: 'Only image files are allowed.'});
+                        });
+                    }
+                }
+            });
+        };
+
         saveImage();
     },
     like: function(req, res){
