@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30613e4a-2ff9-4bc8-9009-76a7f2539f6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/images.js" afterPath="$PROJECT_DIR$/helpers/images.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/sidebar.js" afterPath="$PROJECT_DIR$/helpers/sidebar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/stats.js" afterPath="$PROJECT_DIR$/helpers/stats.js" />
     </list>
     <ignored path="testapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,18 +28,18 @@
       <file leaf-file-name="sidebar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/sidebar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2968254">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.37777779">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stats.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helpers/stats.js">
+      <file leaf-file-name="images.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/images.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -70,7 +70,6 @@
         <option value="$PROJECT_DIR$/views/partials/popular.handlebars" />
         <option value="$PROJECT_DIR$/views/partials/comments.handlebars" />
         <option value="$PROJECT_DIR$/views/layouts/main.handlebars" />
-        <option value="$PROJECT_DIR$/helpers/images.js" />
         <option value="$PROJECT_DIR$/server/public/scripts.js" />
         <option value="$PROJECT_DIR$/views/index.handlebars" />
         <option value="$PROJECT_DIR$/server.js" />
@@ -83,6 +82,7 @@
         <option value="$PROJECT_DIR$/views/image.handlebars" />
         <option value="$PROJECT_DIR$/helpers/comments.js" />
         <option value="$PROJECT_DIR$/helpers/stats.js" />
+        <option value="$PROJECT_DIR$/helpers/images.js" />
         <option value="$PROJECT_DIR$/helpers/sidebar.js" />
       </list>
     </option>
@@ -95,7 +95,6 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="652" />
     <option name="width" value="652" />
     <option name="height" value="768" />
   </component>
@@ -446,11 +445,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452981889970</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Give stats sidebar component real functionality">
+      <created>1452984394900</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1452984394900</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="652" y="0" width="652" height="768" extended-state="0" />
+    <frame x="0" y="0" width="652" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25943395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -494,7 +499,8 @@
     <MESSAGE value="Creating commenting functionality" />
     <MESSAGE value="Making the sidebar comments section asynchronous. Still need to update the Sidebar to handle that asynchronicity." />
     <MESSAGE value="Make sidebar asynchronous, so it can display the latest comments. Still uses fixture data for Stats and Most Popular images." />
-    <option name="LAST_COMMIT_MESSAGE" value="Make sidebar asynchronous, so it can display the latest comments. Still uses fixture data for Stats and Most Popular images." />
+    <MESSAGE value="Give stats sidebar component real functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Give stats sidebar component real functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -659,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/images.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.99841267">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4047619">
@@ -768,10 +767,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/images.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helpers/sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2968254">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.37777779">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
