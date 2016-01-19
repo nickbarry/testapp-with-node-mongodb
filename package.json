@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r tests/testhelper.js -R spec tests/**/*.test.js",
+    "start": "node server.js"
   },
   "author": "NickBarry",
   "license": "ISC",
@@ -22,5 +23,11 @@
     "mongoose": "^4.3.4",
     "morgan": "^1.6.1",
     "multer": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "proxyquire": "^1.7.3",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
   }
 }
